@@ -1,0 +1,11 @@
+
+#pour deflouter image, installer ca avant le pip install -r requirements.txt
+RUN apt-get update ##[edited]
+RUN apt-get install ffmpeg libsm6 libxext6  -y
+DONE;
+
+#ninja pour GFP-GAN
+wget https://github.com/ninja-build/ninja/releases/download/v1.8.2/ninja-linux.zip
+sudo apt-get install unzip
+sudo unzip ninja-linux.zip -d /usr/local/bin/
+sudo update-alternatives --install /usr/bin/ninja ninja /usr/local/bin/ninja 1 --force 
